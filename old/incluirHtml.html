@@ -1,0 +1,44 @@
+Si queréis que el código este mas organizado y no este tan lioso colocando
+
+<html>
+    <head>
+        <script>
+            function load_header() {
+                document.getElementById("contenidoHeader").innerHTML='<object type="text/html" data="src/build/header.html" ></object>';
+            }   
+        </script>
+    </head>
+    <header>
+        <div id="contenidoHeader"></div>
+        <script>
+            load_header();
+        </script>
+    </header>
+</html>
+Ampliar
+
+----------------------------------
+Aquí os dejo una sugerencia:
+esto se carga en un file js
+
+function load_header() {
+    document.getElementById("contenidoHeader").innerHTML='<object type="text/html" data="src/build/header.html" ></object>';
+}   
+<html>
+    <head>
+        <script src="/src/js/app.js"></script> <!--La ruta del archivo puede ser la que sea, pero tiene que ser un archivo .js-->
+    </head>
+    <header>
+        <div id="contenidoHeader"></div>
+        <script>
+            load_header();
+        </script>
+    </header>
+    <body>
+    
+    </body>
+</html>
+
+-------------
+
+<link href="template.html" rel="import" /> 
